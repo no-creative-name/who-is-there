@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countName {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  outline: 0;
+  background-color: darkblue;
+  border: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.08);
+  cursor: pointer;
+
+  &:hover:not([disabled]) {
+    background-color: blue;
+  }
+
+  &:active:not([disabled]) {
+    box-shadow: 0 3px 6px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.1);
+    transform: translateY(1px);
+  }
+
+  &[disabled] {
+    background-color: grey;
+    cursor: default;
+  }
+}
